@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	  xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+	  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	  <link rel="stylesheet" href="css/style.css">
+    <title>Secured</title>
+</head>
+<header>
+<nav>
+<div class= "logout-nav">
+  
+ <span id="head-user">User Home</span>
+  <span id="head-logout"sec:authorize="isAuthenticated()" style="display: inline-block;">
+         Logged user: <span id="head-lo" sec:authentication="name"></span> | 
+        Roles: <span id="head-logt" sec:authentication="principal.authorities"></span> 
+          <a class="home-link" th:href="@{/logout}">Sign Out</a>
+    </span>
+   
+    </div>
+
+</nav>
+</header>
+<body>
+    <p><a class="home-link" href="/" th:href="@{/}">Back to home page</a></p>
+
+    
+  <div id="float-container" >
+    
+  
+  <div class="float-child">
+    <img class="card-img-top" src="images/userlogo.jpg" alt="Card image cap">
+    <h5 class="card-title">Stock Price Data</h5>
+    <p class="card-text">View up to date end of day prices and NASDAQ</p>
+    <div class="col text-center">
+    <a href="/stockPage.html" class="btn btn-dark">See More</a>
+  </div>
+	</div>
+
+  <div class="float-child">
+  <img class="card-img-top" src="images/amazonlogo.jpg" alt="Card image cap">
+    <h5 class="card-title">Amazon Analysis</h5>
+    <p class="card-text">View financial analysis of Amazon </p>
+    <div class="col text-center">
+    <a href="/Amazon.html" class="btn btn-dark">See more</a>
+  </div>
+  </div>
+   
+</div>
+			
+
+		
+	
+  
+		
+	
+
+</body>
+</html>

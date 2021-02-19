@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Registration Form</title>
+
+</head>
+<body>
+<div th:if="${param.sucess}">
+<div>Successful registration</div>
+</div>
+<div>
+<h1>Registration Form</h1>
+</div>
+<form th:action="@{/form}"th:object="${user}"method="post">
+<p th:if="${fields.hasGlobalErrors()}" th:each="${#field.error('global')}" th:text="${error}">Validation Error</p>
+<div th:append="${#fields.hasErrors('firstName')}? "></div>
+
+</form>
+
+</body>
+</html>

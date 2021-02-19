@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<title>Login Page</title>
+	<link rel="stylesheet" href="css/login1.css" th:href="@{/css/login1.css}">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+	<header>
+		<div class="main-nav">
+			<ul class="nav" >
+				<li><a href="/register">REGISTER</a></li>
+				<li><a href="about.html">ABOUT</a></li>	
+			</ul>
+		</div>
+	</header>
+
+	<main>
+		<section>
+			<div class="container">
+
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <h1 id="header_log" class="header">Login</h1>
+                
+                <form class="login_form" th:action="@{/login}" method="post">
+                    <div th:if="${param.error}">
+                        <div class="alert alert-danger">Invalid username or password.
+                        </div>
+                    </div>
+                    <div th:if="${param.logout}">
+                        <div class="alert alert-info">You have been logged out.</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="username">Username</label>: <input type="text" id="username" name="username" class="form-control" autofocus="autofocus" placeholder="Username" />
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>: <input type="password" id="password" name="password" class="form-control" placeholder="Password" />
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-sm-6 col-sm-offset-3">
+                                <input type="submit" name="login-submit" id="login-submit" class="button" value="Login" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <span>New user? <a class="new-link" href="/" th:href="@{/registration}">Register here</a></span>
+                    </div>
+                    <div class="form-group">
+                        <span>Forgot Password? <a class="new-link" href="/" th:href="@{/resetpage}">Reset Password</a></span>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+
+    </div>
+			
+		</section>
+	<script src="js/valid.js"></script>
+	</main>
+</body>
+
+<footer>
+	<nav>
+		<ul>
+			<li><a href="index.html">HOME</a></li>
+			<li><a href="About.html">ABOUT</a></li>
+			<li><a href="Terms.html">TERMS</a></li>
+			<li><a href="contact.html">CONTACT</a></li>
+		</ul>
+	</nav>
+	
+
+</footer>
+</html>

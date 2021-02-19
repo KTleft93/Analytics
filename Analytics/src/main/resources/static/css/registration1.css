@@ -1,0 +1,186 @@
+body {
+  background-size: cover;
+	align-items: center;
+	justify-content: center;
+	display: flex;
+	font-family: sans-serif;
+	background: black;
+}
+
+form {
+  font-family: serif;
+  max-width: 400px;
+  margin: 0 auto 0 auto;
+}
+
+label {
+  width: 100%;
+  display: block;
+}
+
+input {
+  line-height: 1.2em;
+  margin-bottom: 1em;
+  padding: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 95%;
+}
+
+input[type="submit"],
+#submit {
+  background-color: black;
+  border-radius: 5px;
+  color: #0499ff;
+  display: block;
+  padding: 10px;
+  width: 100%;
+  height: 5opx;
+  font-size: 1.2em;
+  border: 1px solid #0499ff
+}
+
+input[type="submit"]:hover,
+#submit:hover {
+  background-color: #0499ff;
+  cursor: pointer;
+  color: white;
+}
+
+textarea {
+  width: 100%;
+  height: 5em;
+  clear: left;
+  border: none;
+}
+
+#formErrors {
+  display: none;
+}
+
+.container-login {
+  position:relative;
+  margin-top: 100px;
+  margin-left: 250px;
+  width: 450px;
+  height: auto;
+  background: black;
+  color: white;
+  border-radius: 5px;
+  border: 1px solid #6495ED;
+  right: 100px;
+  top: 50px;
+  }
+  .container-login .header {
+    font-size: 28px;
+    text-align: center;
+  	font-weight: bold;
+  	color: white;
+  	padding: 25px 0 30px 25px;
+  	background: black;
+  	border-bottom: 1px solid #6495ED;
+  	border-radius: 5px 5px 0 0;
+  }
+  #login{
+  	padding: 20px 40px;
+  }
+
+  header {
+  	position: absolute;
+  	top: 1px;
+  	right: 10px;
+  }
+
+  .main-nav {
+    width: 100%;
+    background: black;
+    min-height: 30px;
+    padding: 10px;
+    text-align: right;
+  }
+
+  .nav {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  .nav a:hover {
+    color: blue;
+  }
+
+  footer {
+    width: 100%;
+    min-height: 30px;
+    padding: 20px 20px;
+    text-align: center;
+    word-spacing: 0.4rem;
+  	position: absolute;
+  	top: 720px;
+  }
+
+  footer ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  footer ul li {
+    display: inline-block;
+  }
+  li a {
+    display: block;
+    color: #0499ff;
+    padding: 8px 16px;
+    text-decoration: none;
+  }
+
+  li a.active {
+    background-color: white;
+    color: black;
+  }
+
+  li a:hover:not(.active) {
+    background-color: #0499ff;
+    color: white;
+  }
+
+  /* Styles for larger screens */
+  @media screen and (min-width: 720px) {
+
+    .flex {
+        display: flex;
+        max-width: 720px;
+        justify-content: space-around;
+        margin: 0 auto;
+    }
+
+    .nav {
+      max-width: 1080px;
+    }
+
+    .nav .name {
+      display: block;
+      margin-right: auto;
+      color: white;
+    }
+
+    main {
+      padding-top: 50px;
+    }
+
+    main p {
+      line-height: 1.6em;
+    }
+
+    footer {
+      font-size: 16px;
+      max-width: 1080px;
+      margin: 40px auto;
+    }
+
+  }

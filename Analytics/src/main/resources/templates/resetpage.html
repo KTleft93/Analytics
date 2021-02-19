@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Password Reset</title>
+	<link rel="stylesheet" href="css/login1.css">
+</head>
+
+<body>
+
+	<header>
+		<div class="main-nav">
+			<ul class="nav">
+				<li><a href="/login">LOGIN</a></li>
+				<li><a href="subscribe.html">SUBSCRIBE</a></li>
+			</ul>
+		</div>
+	</header>
+
+	<div class="container">
+		<div class="header">Reset Password</div>
+
+    <form class="login_form" action="/checkemail.html" method="GET" name="form" onsubmit="return validated()">
+			<div class="font">E-Mail Address</div>
+			<input autocomplete="off" type="text" name="email">
+			<div id="email_error">Please fill up your Email</div>
+			<button type="submit">Send Password Reset Link</button>
+    </form>
+	</div>
+	<script src="js/valid.js"></script>
+
+</body>
+
+<footer>
+	<nav>
+		<ul>
+			<li><a href="index.html">HOME</a></li>
+			<li><a href="stocks.html">MARKETS</a></li>
+			<li><a href="subscribe.html">PRICING</a></li>
+			<li><a href="About.html">ABOUT</a></li>
+			<li><a href="Terms.html">TERMS</a></li>
+			<li><a href="contact.html">CONTACT</a></li>
+		</ul>
+	</nav>
+	<p><small>Copyright &commat;2019 visualizedAnalytics.com</small></p>
+
+</footer>
+
+</html>

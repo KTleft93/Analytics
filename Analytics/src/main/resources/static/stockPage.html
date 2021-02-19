@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<link rel="stylesheet" href="css/style.css">
+	<meta charset="UTF-8">
+	<title>Login Page</title>
+<script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+	<style>
+		.user{
+		
+		 font-family: 'Montserrat', sans-serif;
+		
+ 	
+ 	 width: 100%;
+		
+		}
+		table, th, td {
+		
+		border: 1px solid black;
+		width: 100%;
+		table-layout: fixed;
+		padding-bottom: 10px;
+		
+		}
+		
+		th{
+			text-align: left;
+		}
+		.chart{
+			margin: auto;
+		}
+		
+	
+		
+		.space{
+			padding-top: 50px;
+		}
+		
+	
+	</style>
+	
+</head>
+
+<body>
+   <header>
+      <div class="main-nav">
+        <ul class="nav">
+          <li class="name"><a href="/userhome">Back to User Home</a></li>
+          <li><a href="/login">LOGIN</a></li>
+         
+        </ul>
+      </div>
+    </header>
+
+
+
+<h1>End of Day Stock Prices</h1>
+<table>
+	<tr class="head">
+					<th>Ticker</th>
+					<th>Open</th>
+					<th>High</th>
+					<th>Low</th>
+					<th>Close</th>
+				</tr></table>
+
+<table id="prices" >
+	<tr>
+				</tr></table>
+
+ <script src = "js/finnhub.js"></script>
+ 
+ <div id="space"></div>
+	
+<div id="chartContainer" style="height: 300px; width: 100%;"></div>
+	
+	
+	
+</body>
+
+<footer>
+
+
+
+<script type="text/javascript">
+window.onload = function () {
+  var chart = new CanvasJS.Chart("chartContainer", {
+
+    theme: "light2",
+          
+    title:{
+      text: "NASDAQ Weekly Open & Close Price"              
+    },
+
+    data: [  //array of dataSeries     
+    { //dataSeries - first quarter
+/*** Change type "column" to "bar", "area", "line" or "pie"***/        
+     type: "column",
+     name: "Open",
+     showInLegend: true,
+     dataPoints: [
+     { label: "Monday", y: 13824.88 },
+     { label: "Tuesday", y: 13937.06 },
+     { label: "Wednesday", y: 13966.82 },                                    
+     { label: "Thursday", y: 14093.35 },
+     { label: "Friday", y: 14045.21 }
+     ]
+   },
+
+   { //dataSeries - second quarter
+
+    type: "column",
+    name: "Close", 
+    showInLegend: true,               
+    dataPoints: [
+    { label: "Monday", y: 13856.30 },
+    { label: "Tuesday", y: 13987.64 },
+    { label: "Wednesday", y: 14007.70 },                                    
+    { label: "Thursday", y: 13972.53 },
+    { label: "Friday", y: 14025.77 }
+    ]
+  }
+  ],
+/** Set axisY properties here*/
+  axisY:{
+    prefix: "$"
+   
+  }    
+});
+
+chart.render();
+}
+
+</script>
+
+	<nav>
+		<ul>
+			<li><a href="index.html">HOME</a></li>
+			<li><a href="About.html">ABOUT</a></li>
+			<li><a href="Terms.html">TERMS</a></li>
+			<li><a href="contact.html">CONTACT</a></li>
+		</ul>
+	</nav>
+	
+</footer>
+
+</html>
